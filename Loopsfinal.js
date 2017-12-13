@@ -1,8 +1,8 @@
-function PrimeCheck(a){
+function TimesTable(a){
 
 
 
-
+for()
 
 
 
