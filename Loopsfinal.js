@@ -40,3 +40,16 @@ document.write("</table>");
     document.write("</h1>");
 
 }
+
+
+function factorTree(a){
+
+    for(i = Math.floor(a/2); i > 1; i--){
+
+
+
+    }
+
+
+
+}
