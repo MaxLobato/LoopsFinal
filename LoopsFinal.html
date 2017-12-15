@@ -8,7 +8,19 @@
     <h1>
         <script>
 
+var rows = 10;
+var cells = 10;
 
+document.write("<table>");
+    for(i = 1; i <= rows; i++){
+        document.write("<tr>");
+
+        for(j = 1; j <= cells; j++){
+            document.write("<td>", i * j, "</td>");
+        }
+        document.write("</tr>");
+    }
+document.write("</table>");
         </script>
     </h1>
 </body>
