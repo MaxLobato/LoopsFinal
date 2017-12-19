@@ -1,22 +1,22 @@
 
-function PrimeCheck(a){
+function factorTree(a) {
 
-    var result;
+    var number = a;
 
-  for(i = 2; i < (a/2); i++){
+    document.write("<h1>");
+    document.write("<table>");
+    document.write("<tr>", number, "</tr>");
 
-    if(a%i == 0){
-      result = "not prime";
-    } else {
-        result = "Prime.";
+    for (i = Math.ceil(number / 2); i > 1; i--) {
+        document.write("<tr>");
+
+        if (number % i == 0) {
+            document.write("<td>", number / i, "</td>", "<td>", i, "</td>");
+        }
+        document.write("</tr>");
     }
-
-
-  }
-
-
-    document.write(result);
-
+    document.write("</table>");
+    document.write("</h1>");
 }
 
 
