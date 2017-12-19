@@ -2,6 +2,7 @@ function factorTree(a) {
 
     var number = a;
     var order = 0;
+    var factor = [];
 
     document.write("<h1>");
     document.write("<table>");
@@ -9,11 +10,11 @@ function factorTree(a) {
 
     for (i = Math.ceil(number / 2); i > 1; i--) {
         document.write("<tr>");
-        var factor = [i];
-        order++;
+        factor.push(i);
+        order = order++;
         if (number % i == 0) {
             document.write("<td>", number / factor[order], "</td>", "<td>", factor[order], "</td>");
-            if ((number / factor[order - 1]) >= 3) {
+            if ((number / factor[order])%factor[order] <= 3) {
                 break;
             }
         }
