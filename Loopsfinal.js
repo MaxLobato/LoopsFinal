@@ -11,12 +11,12 @@ function factorTree(a) {
     for (i = Math.ceil(number / 2); i > 1; i--) {
         document.write("<tr>");
         factor.push(i);
-        order = order++;
         if (number % i == 0) {
             document.write("<td>", number / factor[order], "</td>", "<td>", factor[order], "</td>");
-            if ((number / factor[order])%factor[order] <= 3) {
+            if ((number / factor[order]) <= 3) {
                 break;
             }
+            order = order++;
         }
         document.write("</tr>");
     }
