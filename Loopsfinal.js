@@ -4,25 +4,50 @@ function factorTree(a) {
     var order = 0;
     var factor = [];
 
-    document.write("<h1>");
-    document.write("<table>");
-    document.write("<tr>", number, "</tr>");
+document.write("<h1>");
+    document.write(number,"<br>");
 
     for (i = Math.ceil(number / 2); i > 1; i--) {
+
         document.write("<tr>");
+
         factor.push(i);
-        if (number % i == 0) {
-            document.write("<td>", number / factor[order], "</td>", "<td>", factor[order], "</td>");
-            if ((number / factor[order]) <= 3) {
+
+        if (Math.round(number % i) == 0) {
+
+            document.write(number / factor[order],", ", factor[order], "<br>");
+
+            if ((factor[order]%i) <= 3) {
+
                 break;
             }
+
             order = order++;
+
         }
-        document.write("</tr>");
+
     }
-    document.write("</table>");
     document.write("</h1>");
+
 }
+
+function factorTree2(a) {
+
+    document.write("<h1>");
+for(i=2; i < number; i++){
+
+    if(number % i == 0){
+
+    document.write(i, ", ", number);
+    number = number/i;
+    i = 2;
+   }
+}
+
+document.write("</h1>");
+}
+
+
 
 
 
