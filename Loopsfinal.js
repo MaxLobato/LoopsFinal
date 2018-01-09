@@ -4,23 +4,18 @@ function factorTree(a) {
     var order = 0;
     var factor = [];
 
-document.write("<h1>");
-    document.write(number,"<br>");
+    document.write("<h1>");
+    document.write(number, "<br>");
 
     for (i = Math.ceil(number / 2); i > 1; i--) {
-
-        document.write("<tr>");
-
+        if(i )
         factor.push(i);
 
         if (Math.round(number % i) == 0) {
 
-            document.write(number / factor[order],", ", factor[order], "<br>");
+            document.write(number / factor[order], ", ", factor[order], "<br>");
 
-            if ((factor[order]%i) <= 3) {
 
-                break;
-            }
 
             order = order++;
 
@@ -31,21 +26,23 @@ document.write("<h1>");
 
 }
 
-function factorTree2(a) {
-
-    document.write("<h1>");
-for(i=2; i < number; i++){
-
-    if(number % i == 0){
-
-    document.write(i, ", ", number);
-    number = number/i;
-    i = 2;
-   }
+function betterFactorTree(number) {
+    for(i = 2; i < number; i++) {
+        if(number % i == 0) {
+            console.log(i);
+            number = number/i;
+            console.log(number);
+            i = 2;
+        }
+    }
 }
 
-document.write("</h1>");
-}
+
+
+
+
+
+
 
 
 
